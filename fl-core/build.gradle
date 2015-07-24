@@ -1,0 +1,26 @@
+apply plugin: 'java'
+
+sourceCompatibility = JavaVersion.VERSION_1_6
+targetCompatibility = JavaVersion.VERSION_1_6
+
+archivesBaseName = 'simple-utils'
+group = 'org.repetti'
+version = '0.5.1'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile fileTree(dir: '../lib', include: '*.jar')
+
+    compile group: 'com.google.guava', name: 'guava', version: '18.0'
+
+    compile group: 'org.jetbrains', name: 'annotations', version: project.versionAnnotations
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: project.versionJackson
+    compile group: 'org.slf4j', name: 'slf4j-api', version: project.versionSlf4j
+
+    testRuntime group: 'org.slf4j', name: 'slf4j-simple', version: project.versionSlf4j
+
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
