@@ -1,0 +1,5 @@
+rootProject.name = 'photolib'
+include 'fl-core'
+include 'fl-simpleui'
+include 'fl-wui'
+
